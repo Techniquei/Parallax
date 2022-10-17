@@ -11,34 +11,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
-    <script src="/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <script src="/ScrollSmoother.min.js" defer></script>
+
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
 
-    <header class="main-header">
-        <div class="layers">
-            <div class="layer__header">
-                <div class="layer__caption">Welcome to Parallax</div>
-                <div class="layer__title">Fairy Forest</div>
-            </div>
-            <div class="layer layers__base"></div>
-            <div class="layer layers__middle"></div>
-            <div class="layer layers__front"></div>
-        </div>
-    </header>
+    <div class="wrapper">
+        <div class="container">
+            
+            <header class="main-header">
+                <div class="layers">
+                    <div class="layer__header">
+                        <div class="layer__caption">Welcome to Parallax</div>
+                        <div class="layer__title">Fairy Forest</div>
+                    </div>
+                    <div class="layer layers__base"></div>
+                    <div class="layer layers__middle"></div>
+                    <div class="layer layers__front"></div>
+                </div>
+            </header>
 
-    <article class="main-article">
-        <div class="main-article__content">
-            <h2 class="mailn-article__header">
-                To be continiued
-            </h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aperiam sint totam suscipit inventore,
-                vero repellendus voluptas maxime cupiditate explicabo at non impedit voluptatem vel obcaecati, et quidem
-                neque sequi, earum quia.</p>
+            <article class="main-article">
+                <div class="main-article__content">
+                    <h2 class="main-article__header">
+                        To be continiued
+                    </h2>
+                    <p class="main-article__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aperiam sint totam suscipit inventore,
+                        vero repellendus voluptas maxime cupiditate explicabo at non impedit voluptatem vel obcaecati, et quidem
+                        neque sequi, earum quia.</p>
+                </div>
+                <div class="copy">©️ Technique 2022</div>
+            </article>
+
         </div>
-        <div class="copy">©️ Technique</div>
-    </article>
+    </div>
 
 </body>
 

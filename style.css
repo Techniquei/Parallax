@@ -6,6 +6,7 @@
 
 :root{
     --index:calc(1vw+1vh);
+    --transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
 
 
@@ -19,7 +20,7 @@ body{
 .layers__base{
     background-image: url(/img/layer-base.png);
     transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
-   z-index: 0;
+    z-index: 0;
 }
 
 .layers__middle{
@@ -41,16 +42,61 @@ body{
     text-transform: uppercase;
     font-weight: 900;
     color:#ededdc;
-    text-shadow: 0 0 15px #b4892c;
+    text-shadow: 0 0 50px #b4892c;
+    transition: var(--transition);
 }
 
 .main-header{
     position: relative;
 }
 
+.main-header::after{
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--index)*10);
+    background-image: url(/img/ground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: calc(var(--index)* -4.5);
+}
+
 .main-article{
     background-image: url(/img/dungeon.jpg);
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color:#ededdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.main-article__header{
+    text-transform: uppercase;
+    font-size: calc(var(--index)*1.8);
+    letter-spacing: calc(var(--index)/8);
+    transform: translate3d(0,calc(var(--scrollTop)/ -7.5), 0);
+    transition: var(--transition);
+}
+
+.main-article__paragraph{
+    max-width: calc(var(--index)*50);
+    font-size: calc(var(--index)*1.5);
+    margin-top: calc(var(--index));
+    transform: translate3d(0,calc(var(--scrollTop)/ -7.5), 0);
+    transition: var(--transition);
+}
+
+.copy{
+    position: absolute;
+    bottom: calc(var(--index)* 2);
+    font-size: calc(var(--index)*1.2);
+    letter-spacing: calc(var(--index)/35);
 }
 
 .layers{
@@ -70,6 +116,7 @@ body{
     background-size: cover;
     background-position: center;
     will-change: transform;
+    transition: var(--transition);
 }
 
 .layer__title{
@@ -83,3 +130,6 @@ body{
     margin-top: calc(-2*var(--index));
 }
 
+.container{
+    will-change: transform;
+}
